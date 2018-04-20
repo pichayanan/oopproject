@@ -1,7 +1,7 @@
 package projectpp;
 
-import projectpp.MOM;
 import java.util.Scanner;
+
 class polaroid extends MOM implements colorpolaroid{
 public static int x,count_size,count_color;
 public static double price_size,price_color,price1,price2,pp;
