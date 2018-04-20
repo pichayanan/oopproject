@@ -1,14 +1,12 @@
 package projectpp;
 
-import projectpp.MOM;
 import java.util.Scanner;
-    class money extends MOM {
+
+class money extends MOM {
         
-   public static int choose,amount; 
-        
-    public static double pro,totalp=0,money,change;
-    
-    calendar c = new calendar();
+public static int choose,amount,choice; 
+public static double pro,totalp=0,money,change;
+calendar c = new calendar();
     
     void pprice(){}
     
@@ -20,12 +18,12 @@ import java.util.Scanner;
         System.out.println("                     P&P SHOP : PSU PHUKET                   ");
         c.day();
         System.out.println("_____________________________________________________________");
-        System.out.println("Polaroid               "+sum1);
-        System.out.println("Light                  "+sum2);
-        System.out.println("Box Set                "+sum3);
+        System.out.println("Polaroid                                            "+sum1);
+        System.out.println("Light                                               "+sum2);
+        System.out.println("Box Set                                             "+sum3);
         total = sum1+sum2+sum3;
         System.out.println("-------------------------------------------------------------");
-        System.out.println("Total                  "+total);
+        System.out.println("Total                                               "+total);
         
         
     if(total>=300&&total<500){
@@ -41,30 +39,42 @@ import java.util.Scanner;
     }
     else if(total>=1000){
         System.out.println(" --- Free set A 1 Set --- ");
+        totalp=total;
+        pro=totalp;
     }
     else{
         System.out.println(" -- Not In Promotion -- ");
         totalp=total;
         pro=total;
     }
-        System.out.println("Promotion              "+pro);
+        System.out.println("Promotion                                           "+pro);
                        
 
                 Scanner mon1=new Scanner(System.in);
-                System.out.print("Please enter your money : ");
+        System.out.print("Please enter your money :                           ");
                 money = mon1.nextDouble();
             
            if(money<pro){ 
-            do{
-                System.out.print("Please enter your money : ");
-                money = mon1.nextDouble();
-            }while(!(money>pro));
-               change=money-pro;
-            System.out.println("Change                 "+change); 
-            }
+            
+                System.out.println(" Your Money Not Enough ");
+                do{System.out.println(" [1] End Program : [2] Enter New Money ");
+                  Scanner sc5 = new Scanner(System.in);
+                  System.out.print("Which choice do you want? : ");
+                  choice=sc5.nextInt();
+                  if(choice==1){ 
+                }
+                  else if(choice==2){
+        System.out.print("Please enter your money :                           ");
+                    money = mon1.nextDouble(); 
+                    change=money-pro;
+        System.out.println("Change                                              "+change); 
+                  }
+               
+                }while(choice!=1&&choice!=2);
+           }
             else if(money>=pro){
             change=money-pro;
-            System.out.println("Change                 "+change);
+        System.out.println("Change                                              "+change);
            }
            
            System.out.println("-------------------------------------------------------------");
@@ -121,28 +131,37 @@ import java.util.Scanner;
         System.out.println("                     P&P SHOP : PSU PHUKET                   ");
         c.day();
         System.out.println("_____________________________________________________________");
-        System.out.println("Polaroid               "+sum1);
-        System.out.println("Light                  "+sum2);
-        System.out.println("Box Set                "+sum3);
+        System.out.println("Polaroid                                            "+sum1);
+        System.out.println("Light                                               "+sum2);
+        System.out.println("Box Set                                             "+sum3);
         total = sum1+sum2+sum3;
-        System.out.println("Total                  "+total);
+        System.out.println("Total                                               "+total);
        
             Scanner mon1 = new Scanner(System.in);
-            System.out.print("Please enter your money : ");
+        System.out.print("Please enter your money :                           ");
             money = mon1.nextDouble();
            
             
         if(money<total){
-           do{ 
-            System.out.print("Please enter your money : ");
-            money = mon1.nextDouble();
-           }while(!(money>total));
-            change=money-total;
-        System.out.println("Change                 "+change);
-           }
+           System.out.println(" Your Money Not Enough ");
+                do{System.out.println(" [1] End Program : [2] Enter New Money ");
+                  Scanner sc5 = new Scanner(System.in);
+                  System.out.print("Which choice do you want? : ");
+                  choice=sc5.nextInt();
+                  if(choice==1){  
+                }
+                  else if(choice==2){
+        System.out.print("Please enter your money :                           ");
+                    money = mon1.nextDouble(); 
+                    change=money-total;
+        System.out.println("Change                                              "+change); 
+                  }
+               
+            }while(choice!=1&&choice!=2);
+        }
            else{
             change=money-total;
-        System.out.println("Change                 "+change);
+        System.out.println("Change                                              "+change);
           }
         
           System.out.println("-------------------------------------------------------------");

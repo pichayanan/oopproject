@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Menu extends money  {
     
     static String g,m,il,ip;
-    static String []a = new String[3] ;
+    static String []a = new String[3];
     static int number;
     static String id[] ={"12345","01234"};
     static String pw[] ={"54321","43210"};
@@ -73,11 +73,11 @@ public class Menu extends money  {
         if(m.equals("Y")||m.equals("y")){
           do{  
             Scanner sc2 = new Scanner(System.in);
-            System.out.print("Enter Your Member ID : ");
+            System.out.print("Enter Your Member ID  : ");
             il = sc2.nextLine();
             
             Scanner sc3 = new Scanner(System.in);
-            System.out.print("Enter Your Password  : ");
+            System.out.print("Enter Your Password   : ");
             ip = sc3.nextLine();
           }while(!(il.equals(id[0])&&ip.equals(pw[0])||il.equals(id[1])&&ip.equals(pw[1]))); 
    

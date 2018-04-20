@@ -75,7 +75,7 @@ public void pprice(){
     price1 = count_size*price_size;
     price2 = count_color*price_color+pp;
     price_po = price1+price2;
-    System.out.println("                   Price is : "+price_po                    );
+    System.out.println("                      Price is : "+price_po                    );
 } 
 
 public double ppprice(){

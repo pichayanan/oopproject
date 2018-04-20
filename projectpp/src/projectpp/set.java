@@ -35,7 +35,7 @@ public void choice(){
 public void pprice(){
    price_s = price_set*count_set;
    System.out.println("_____________________________________________________________");
-   System.out.println("                    Price is : "+price_s                      );
+   System.out.println("                   Price is : "+price_s                      );
 }
 
 public double ppprice(){
